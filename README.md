@@ -4,7 +4,7 @@
 Ce projet est une application web full-stack conçue pour la recherche de centres pour les personnes en situation de handicap.
 
 ## Sommaire
-- [Authentification](authentification/README.md) - Description et documentation de la partie authentification du projet.
+- [Authentification](authentification/) - Description et documentation de la partie authentification du projet.
 
 
 ## Technologies Utilisées
