@@ -14,6 +14,7 @@
             <input type="text" name="name" placeholder="Name"/>
             <input type="email" name="email" placeholder="Email"/>
             <input type="password" name="password" placeholder="Password"/>
+            <input type="password" name="confirm_password" placeholder="Confirm Password"/>
             <button>Inscrivez-vous</button>
         </form>
     </div>
@@ -42,5 +43,6 @@
     </div>
 </div>
 <script src="static/Animations/auth.js"></script>
+<script src="static/MDP/PassWord.js"></script>
 </body>
 </html>
