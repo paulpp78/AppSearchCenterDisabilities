@@ -13,14 +13,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row['password'])) {
-            echo "Connexion réussie.";
-
+            echo '<span id="signin_success_message">Connexion réussie.</span>';
         } else {
-            echo "Mot de passe incorrect.";
+            echo '<span id="signin_incorrect_password_message">Mot de passe incorrect.</span>';
         }
     } else {
-        echo "Aucun utilisateur trouvé avec cet email.";
+        echo '<span id="signin_no_user_message">Aucun utilisateur trouvé avec cet email.</span>';
     }
+
     mysqli_close($link);
 }
 ?>
