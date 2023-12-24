@@ -1,4 +1,5 @@
-#map { 
-    height: 600px;
-    width: 50%;
+#map {
+    height: 700px;
+    width: auto;
+    flex: 1;
 }
