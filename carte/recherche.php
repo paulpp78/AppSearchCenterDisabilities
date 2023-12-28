@@ -1,5 +1,6 @@
 <?php
-if(isset($_GET['handicap'])) {
+
+if (isset($_GET['handicap'])) {
     $handicap = $_GET['handicap'];
 
     $apiUrl = 'https://api.opendata.onisep.fr/downloads/5fa55f1539b76/5fa55f1539b76.json';
@@ -11,13 +12,15 @@ if(isset($_GET['handicap'])) {
         if ($handicap === 'Tous les centres') {
             $filteredCenters = $centers;
         } else {
-            $filteredCenters = array_filter($centers, function($center) use ($handicap) {
+            $filteredCenters = array_filter($centers, function ($center) use ($handicap) {
                 $decodedHandicap = json_decode('"' . $center['handicap_principal'] . '"');
                 return stripos($decodedHandicap, $handicap) !== false;
             });
         }
 
-        include 'carte.php';
+        // Retourner les données au format JSON
+        header('Content-Type: application/json');
+        echo json_encode($filteredCenters);
     } else {
         echo 'Erreur lors de la récupération des données de l\'API.';
     }

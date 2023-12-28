@@ -1,0 +1,41 @@
+/* header.css */
+
+header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 0; /* Réduction de la taille du padding */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-size: 2rem; /* Réduction de la taille de la police */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-nav {
+    text-align: right;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1rem; /* Réduction de la taille de la police */
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Couleur jaune au survol */
+}

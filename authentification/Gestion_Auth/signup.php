@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $confirm_password = mysqli_real_escape_string($link, $_POST['confirm_password']);
 
     if (!isValidPassword($password) || $password !== $confirm_password) {
-        die('<span id="signup_error_message">Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et correspondre à la confirmation.</span>');
+        header("Location: erreur.php?message=Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et correspondre à la confirmation.");
     }
     // Hachage du mot de passe
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -17,10 +17,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$hashed_password')";
 
     if (mysqli_query($link, $query)) {
-        echo '<span id="signup_success_message">Utilisateur enregistré avec succès.</span>';
+        // Enregistrement réussi, créer la session
+        $user_id = mysqli_insert_id($link);
+        session_start();
+        $_SESSION['user_id'] = $user_id;
+        // Rediriger l'utilisateur vers app.php
+        header("Location: ../../app.php");
+
+        exit();
     } else {
-        echo '<span id="signup_error_message">Erreur : ' . $query . '<br>' . mysqli_error($link) . '</span>';
+        $errorMessage = 'Erreur : ' . $query . '<br>' . mysqli_error($link);
+        header("Location: erreur.php?message=$errorMessage");
     }
+
 
     mysqli_close($link);
 }

@@ -7,18 +7,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     // Récupération du mot de passe depuis la base de données
-    $query = "SELECT password FROM users WHERE email = '$email'";
+    $query = "SELECT id, password FROM users WHERE email = '$email'";
     $result = mysqli_query($link, $query);
 
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row['password'])) {
-            echo '<span id="signin_success_message">Connexion réussie.</span>';
+            // Connexion réussie, créer la session
+            $_SESSION['user_id'] = $row['id'];
+            // Rediriger l'utilisateur vers app.php
+            header("Location: ../../app.php");
+
+            exit();
         } else {
-            echo '<span id="signin_incorrect_password_message">Mot de passe incorrect.</span>';
+            header("Location: erreur.php?message=Mot de passe incorrect.");
         }
     } else {
-        echo '<span id="signin_no_user_message">Aucun utilisateur trouvé avec cet email.</span>';
+        header("Location: erreur.php?message=Aucun utilisateur trouvé avec cet email.");
     }
 
     mysqli_close($link);

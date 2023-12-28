@@ -1,0 +1,30 @@
+/* footer.css */
+footer {
+    margin-top: auto;
+    padding: 10px 0;
+    background-color: #343a40;
+}
+
+.social-links a,
+.github-link a {
+    color: #ffffff;
+    margin-right: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links i,
+.github-link i {
+    margin-right: 5px;
+}
+
+.social-links a:hover,
+.github-link a:hover {
+    color: #ffc107;
+    transform: scale(1.2);
+}
+
+footer p:hover {
+    color: #ffc107;
+}

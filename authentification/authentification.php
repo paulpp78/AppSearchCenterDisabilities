@@ -1,3 +1,13 @@
+<!-- authentification.php -->
+<?php
+session_start();
+
+// Vérifier si l'utilisateur est déjà connecté
+if (isset($_SESSION['user_id'])) {
+    header("Location: app.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
