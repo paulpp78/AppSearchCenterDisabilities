@@ -17,14 +17,11 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recherche de centres</title>
-    <!-- Ajout de Bootstrap CSS -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <!-- Ajout de jQuery UI CSS -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!-- Ajout de jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <!-- Ajout de fichiers style.css -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../includes/footer/footer.css">
     <link rel="stylesheet" href="../includes/header/header.css">
@@ -73,10 +70,7 @@ if (!isset($_SESSION['user_id'])) {
 <?php include '../includes/footer/footer.php'; ?>
 
 <script src="map.js"></script>
-<!-- Ajout de Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Ajout de jQuery UI JS -->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
 

@@ -3,13 +3,13 @@
 header {
     background-color: #007bff;
     color: #ffffff;
-    padding: 10px 0; /* Réduction de la taille du padding */
+    padding: 10px 0;
     text-align: center;
 }
 
 h1 {
     margin-bottom: 0;
-    font-size: 2rem; /* Réduction de la taille de la police */
+    font-size: 2rem;
 }
 
 .navbar-toggler-icon {
@@ -32,10 +32,10 @@ h1 {
 
 .navbar-nav .nav-link {
     color: #ffffff;
-    font-size: 1rem; /* Réduction de la taille de la police */
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ffcc00; /* Couleur jaune au survol */
+    color: #ffcc00;
 }
