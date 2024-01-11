@@ -40,6 +40,7 @@ authentification/
 ### Base de Données
 - Le script `users.sql` crée une table `users` pour stocker les données des utilisateurs.
 - `db_connexion.php` établit la connexion à la base de données MySQL.
+  - Il faut faire attention à bien configuré la base de données avant de lancer l'application. Créer une base user par exemple. 
 
 ## Installation
 1. Clonez le dépôt Git : `git clone git@github.com:paulpp78/Project_FullStackWeb_S3.git`

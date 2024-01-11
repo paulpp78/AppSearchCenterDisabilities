@@ -33,6 +33,3 @@ Si vous souhaitez contribuer à l'amélioration de cette application, suivez ces
 3. Commit des changements (`git commit -m 'Ajout de nouvelles fonctionnalités'`).
 4. Push vers la branche (`git push origin ameliorations`).
 5. Création d'une Pull Request.
-
-## Licence
-Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
