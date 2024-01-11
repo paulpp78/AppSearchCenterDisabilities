@@ -1,7 +1,7 @@
 # Fonctionnalités d'Authentification
 
 ## Vue d'ensemble
-La fonctionnalité d'authentification permet aux utilisateurs de s'inscrire et de se connecter à l'application.
+La fonctionnalité d'authentification permet aux utilisateurs de s'inscrire et de se connecter à l'application. Elle a été réorganisée pour une meilleure clarté et une gestion plus sécurisée.
 
 ## Structure du Projet
 Voici l'arborescence du projet pour la partie authentification :
@@ -9,6 +9,8 @@ Voici l'arborescence du projet pour la partie authentification :
 authentification/
 ├── Formulaire_Auth.php      # Page HTML pour l'authentification
 ├── Gestion_Auth
+│   ├── erreur.php           # Gestion des erreurs
+│   ├── logout.php           # Déconnexion de l'utilisateur
 │   ├── signin.php           # Script PHP pour la connexion
 │   └── signup.php           # Script PHP pour l'inscription
 ├── database
@@ -19,6 +21,8 @@ authentification/
 └── static
     ├── Animations
     │   └── auth.js          
+    ├── MDP
+    │   └── PassWord.js
     └── styles
         └── auth.css         
 ```
@@ -27,6 +31,7 @@ authentification/
 ## Authentification
 - **Inscription** (`signup.php`) : Permet la création de nouveaux comptes utilisateur. Les mots de passe sont sécurisés via hachage.
 - **Connexion** (`signin.php`) : Authentifie les utilisateurs en vérifiant l'email et le mot de passe.
+- **Deconnexion** (`logout.php`) : Permet aux utilisateur de se déconnecter.
 
 ### Sécurité
 - Les mots de passe sont hachés avant d'être stockés dans la base de données.

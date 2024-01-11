@@ -1,0 +1,14 @@
+.idea/
+Thumbs.db
+.DS_Store
+/vendor/
+/node_modules/
+*.log
+*.sqlite
+/build/
+/dist/
+/bower_components/
+/jspm_packages/
+.docker/
+.komodoproject
+.history/
